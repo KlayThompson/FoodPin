@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZNs-cA-9b2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Discover-->
+        <scene sceneID="ToZ-Ma-bvq">
+            <objects>
+                <tableViewController id="5c5-PP-U9U" customClass="DiscoveryTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y1U-69-aLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="250" id="Qoa-iu-tAZ" customClass="DiscoveryTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qoa-iu-tAZ" id="yk8-OK-z31">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wafflewolf" translatesAutoresizingMaskIntoConstraints="NO" id="7vH-4Y-pTI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-Sp-tZg">
+                                            <rect key="frame" x="10" y="83" width="355" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="nwt-18-Ctl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmu-ja-3zP">
+                                            <rect key="frame" x="10" y="116" width="355" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="1aT-RJ-dzG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icg-lN-qID">
+                                            <rect key="frame" x="10" y="138" width="355" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="EIO-wf-FXJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="icg-lN-qID" secondAttribute="trailing" constant="10" id="11o-eD-Ehz"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ayv-Sp-tZg" secondAttribute="trailing" constant="10" id="155-aa-bKs"/>
+                                        <constraint firstItem="wmu-ja-3zP" firstAttribute="centerY" secondItem="yk8-OK-z31" secondAttribute="centerY" id="AWD-bh-ADq"/>
+                                        <constraint firstItem="7vH-4Y-pTI" firstAttribute="leading" secondItem="yk8-OK-z31" secondAttribute="leading" id="B5Y-GJ-fj0"/>
+                                        <constraint firstItem="wmu-ja-3zP" firstAttribute="leading" secondItem="yk8-OK-z31" secondAttribute="leading" constant="10" id="FK3-Mb-Os3"/>
+                                        <constraint firstAttribute="trailing" secondItem="wmu-ja-3zP" secondAttribute="trailing" constant="10" id="Gie-pI-qE5"/>
+                                        <constraint firstAttribute="trailing" secondItem="7vH-4Y-pTI" secondAttribute="trailing" id="LPP-it-Euc"/>
+                                        <constraint firstItem="wmu-ja-3zP" firstAttribute="top" secondItem="Ayv-Sp-tZg" secondAttribute="bottom" constant="5" id="RgR-qP-vEP"/>
+                                        <constraint firstItem="Ayv-Sp-tZg" firstAttribute="leading" secondItem="yk8-OK-z31" secondAttribute="leading" constant="10" id="Z8C-P7-Hly"/>
+                                        <constraint firstItem="7vH-4Y-pTI" firstAttribute="top" secondItem="yk8-OK-z31" secondAttribute="top" id="tjp-w5-Ji9"/>
+                                        <constraint firstItem="icg-lN-qID" firstAttribute="top" secondItem="wmu-ja-3zP" secondAttribute="bottom" constant="5" id="wLk-mN-iwp"/>
+                                        <constraint firstItem="icg-lN-qID" firstAttribute="leading" secondItem="yk8-OK-z31" secondAttribute="leading" constant="10" id="wnF-cd-PoF"/>
+                                        <constraint firstAttribute="bottom" secondItem="7vH-4Y-pTI" secondAttribute="bottom" id="zFo-y9-Pqv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="adressLabel" destination="icg-lN-qID" id="6qO-1c-Rhv"/>
+                                    <outlet property="nameLabel" destination="Ayv-Sp-tZg" id="gQr-X8-RyY"/>
+                                    <outlet property="restaurantImageView" destination="7vH-4Y-pTI" id="7f9-SS-LIT"/>
+                                    <outlet property="typeLabel" destination="wmu-ja-3zP" id="XH6-XP-D75"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5c5-PP-U9U" id="mWC-SN-qth"/>
+                            <outlet property="delegate" destination="5c5-PP-U9U" id="z9k-ID-3Cm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Discover" id="Vsr-41-Um2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBN-3a-unE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="778"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="X9Z-lK-twb">
+            <objects>
+                <navigationController id="ZNs-cA-9b2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="GQB-tf-fa4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jeJ-ZI-nqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5c5-PP-U9U" kind="relationship" relationship="rootViewController" id="PgB-dt-63o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EoT-W6-q5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="778"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="discover" width="25" height="19"/>
+        <image name="wafflewolf" width="480" height="480"/>
+    </resources>
+</document>
