@@ -1,0 +1,18 @@
+PODS:
+  - SVProgressHUD (2.1.2)
+  - ZLPhotoBrowser (2.2.6)
+  - ZYBannerView (1.1.4)
+
+DEPENDENCIES:
+  - SVProgressHUD
+  - ZLPhotoBrowser
+  - ZYBannerView
+
+SPEC CHECKSUMS:
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  ZLPhotoBrowser: 2b40c142f8700f7a460ba9a37f6247c83cb858b5
+  ZYBannerView: 477bcb8c38bb0b2a45bae014f9e4fa8357809023
+
+PODFILE CHECKSUM: 2c64e6bc6b705b8743bbcd9b1c3af1270c2fd05d
+
+COCOAPODS: 1.1.1

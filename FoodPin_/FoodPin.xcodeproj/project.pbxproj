@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A419E9F042821224D35DA58 /* Pods_FoodPin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65682840A212E6D222CD2D9 /* Pods_FoodPin.framework */; };
 		485B03B11E825F4B00F3D584 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485B03AF1E825F4B00F3D584 /* About.storyboard */; };
 		485B03B31E825F9000F3D584 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485B03B21E825F9000F3D584 /* Discover.storyboard */; };
 		485B03B51E82627300F3D584 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B03B41E82627300F3D584 /* AboutTableViewController.swift */; };
@@ -50,6 +51,9 @@
 		48EA3C471E7AA59A00D0281B /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		48EA3C491E7D614400D0281B /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		48EA3C4B1E7D62B300D0281B /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		8789825EEF251797FA468E85 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
+		A65682840A212E6D222CD2D9 /* Pods_FoodPin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1624D4DE4EF49520CE00BB0 /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 		F4D336BE1D2E4309003010DD /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D336C11D2E4309003010DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D336C61D2E4309003010DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485E95E01E783B830068CE8D /* MapKit.framework in Frameworks */,
+				3A419E9F042821224D35DA58 /* Pods_FoodPin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				485E95DF1E783B830068CE8D /* MapKit.framework */,
+				A65682840A212E6D222CD2D9 /* Pods_FoodPin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,12 +119,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C88777206C645203669FFE1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8789825EEF251797FA468E85 /* Pods-FoodPin.debug.xcconfig */,
+				E1624D4DE4EF49520CE00BB0 /* Pods-FoodPin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4D336B51D2E4309003010DD = {
 			isa = PBXGroup;
 			children = (
 				F4D336C01D2E4309003010DD /* FoodPin */,
 				F4D336BF1D2E4309003010DD /* Products */,
 				485E95DE1E783B830068CE8D /* Frameworks */,
+				C88777206C645203669FFE1A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D336D01D2E4309003010DD /* Build configuration list for PBXNativeTarget "FoodPin" */;
 			buildPhases = (
+				DAFB612F13BD43F9E7000B7E /* [CP] Check Pods Manifest.lock */,
 				F4D336BA1D2E4309003010DD /* Sources */,
 				F4D336BB1D2E4309003010DD /* Frameworks */,
 				F4D336BC1D2E4309003010DD /* Resources */,
+				62ED1A3BCA64E16DFD48614C /* [CP] Embed Pods Frameworks */,
+				1C3D65A8643AA52F36F46EA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +241,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C3D65A8643AA52F36F46EA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62ED1A3BCA64E16DFD48614C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAFB612F13BD43F9E7000B7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4D336BA1D2E4309003010DD /* Sources */ = {
@@ -370,6 +437,7 @@
 		};
 		F4D336D11D2E4309003010DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8789825EEF251797FA468E85 /* Pods-FoodPin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -384,6 +452,7 @@
 		};
 		F4D336D21D2E4309003010DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1624D4DE4EF49520CE00BB0 /* Pods-FoodPin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

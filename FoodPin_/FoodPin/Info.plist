@@ -47,5 +47,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>You need to grant the app access to your camera so you can pick your favorite restaurant photo.</string>
 </dict>
 </plist>

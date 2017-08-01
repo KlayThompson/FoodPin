@@ -8,19 +8,28 @@
 
 import UIKit
 import MapKit
+import ZYBannerView
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet var restaurantImageView: UIImageView!
+//    @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView:UITableView!
+    @IBOutlet weak var bannerView: ZYBannerView!
+    
     
     var restaurant:RestaurantMO!
-
+    var localImages: [UIImage]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        restaurantImageView.image = UIImage(data: restaurant.image! as Data)
+        bannerView.dataSource = self
+
+        localImages = restaurant.images as? [UIImage]
+        
+//        restaurantImageView.image = UIImage(data: restaurant.image! as Data)
         
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
@@ -167,4 +176,27 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     */
 
+}
+
+extension RestaurantDetailViewController: ZYBannerViewDataSource {
+
+    func numberOfItems(inBanner banner: ZYBannerView!) -> Int {
+        return localImages?.count ?? 0
+    }
+    
+    func banner(_ banner: ZYBannerView!, viewForItemAt index: Int) -> UIView! {
+        
+        guard let image = localImages?[index] else {
+            return UIView()
+        }
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        return imageView
+    }
+    
+    func banner(_ banner: ZYBannerView!, titleForFooterWith footerState: ZYBannerFooterState) -> String! {
+        return "别扯了，扯坏了"
+    }
+    
 }

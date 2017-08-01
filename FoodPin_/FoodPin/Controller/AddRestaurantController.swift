@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import ZLPhotoBrowser
+import ZYBannerView
 
 class AddRestaurantController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
@@ -24,6 +26,11 @@ class AddRestaurantController: UITableViewController,UIImagePickerControllerDele
     @IBOutlet weak var noButton: UIButton!
     
     @IBOutlet weak var phoneTextField: UITextField!
+    
+    @IBOutlet weak var bannerView: ZYBannerView!
+    
+    var localImages: [UIImage]?
+    
     
     var restaurant:RestaurantMO!
     var isVisited = true
@@ -96,7 +103,7 @@ class AddRestaurantController: UITableViewController,UIImagePickerControllerDele
             restaurant.type = typeTextField.text
             restaurant.isVisited = isVisited
             restaurant.phone = phoneTextField.text
-            
+            restaurant.images = localImages! as NSObject
             if let restaruantImage = photoImageView.image {
                 if let imageData = UIImagePNGRepresentation(restaruantImage) {
                     restaurant.image = NSData (data: imageData)
@@ -135,13 +142,32 @@ class AddRestaurantController: UITableViewController,UIImagePickerControllerDele
         
         if indexPath.row == 0 {
             
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                let imagePicker = UIImagePickerController()
-                imagePicker.allowsEditing = false
-                imagePicker.delegate = self
-                imagePicker.sourceType = .photoLibrary
-                present(imagePicker, animated: true, completion: nil)
+//            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//                let imagePicker = UIImagePickerController()
+//                imagePicker.allowsEditing = false
+//                imagePicker.delegate = self
+//                imagePicker.sourceType = .photoLibrary
+//                present(imagePicker, animated: true, completion: nil)
+//            }
+            let photoSelect = ZLPhotoActionSheet()
+            photoSelect.maxSelectCount = 8
+            photoSelect.maxPreviewCount = 20
+            photoSelect.sender = self
+            photoSelect.allowSelectLivePhoto = true
+            photoSelect.selectImageBlock = {images, assets, isOriginal in
+                print("")
+                
+                self.localImages = images
+                self.bannerView.isHidden = false
+                self.bannerView.dataSource = self
+                self.bannerView.shouldLoop = true
+                self.bannerView.autoScroll = true
+                self.photoImageView.image = images[0]
+
             }
+            
+            photoSelect.showPhotoLibrary()
+
         }
     }
 
@@ -176,4 +202,23 @@ class AddRestaurantController: UITableViewController,UIImagePickerControllerDele
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+// MARK: - ZYBannerViewDataSource
+extension AddRestaurantController:ZYBannerViewDataSource {
+
+    func numberOfItems(inBanner banner: ZYBannerView!) -> Int {
+        return localImages?.count ?? 0
+    }
+    
+    func banner(_ banner: ZYBannerView!, viewForItemAt index: Int) -> UIView! {
+        
+        guard let image = localImages?[index] else {
+            return UIView()
+        }
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        return imageView
+    }
 }

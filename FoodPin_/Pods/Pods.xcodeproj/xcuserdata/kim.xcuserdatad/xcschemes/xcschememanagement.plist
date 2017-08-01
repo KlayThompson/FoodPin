@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-FoodPin.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZLPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZYBannerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0565DDCFC972A003A4561B8B8119AA2F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06942378ADE3E0BAC324E6E727A669C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>982FCE45AD833ECEE62D9271B866E03C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E464075B9726387E714FA7C3B7BD0A96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

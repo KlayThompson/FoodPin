@@ -152,7 +152,8 @@ class RestaurantTableViewController: UITableViewController,NSFetchedResultsContr
         let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
         
         cell.nameLabel.text = restaurant.name
-        cell.thumbnailImageView.image = UIImage (data: restaurant.image! as Data)
+        let localImages = restaurant.images as? [UIImage]
+        cell.thumbnailImageView.image = localImages?.first ?? UIImage(named: "")
         cell.locationLabel.text = restaurant.location
         cell.typeLabel.text = restaurant.type
 
